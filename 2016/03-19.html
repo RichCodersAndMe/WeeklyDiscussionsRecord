@@ -28,7 +28,7 @@
     </header>
     <section>
         <h3>
-            <a class="anchor" href="#creating-pages-manually" aria-hidden="true"><span
+            <a class="anchor" aria-hidden="true"><span
                     aria-hidden="true" class="octicon octicon-link"></span></a>从CSS优先级来优化CSS</h3>
         <p> &nbsp;&nbsp;&nbsp;&nbsp; Web前端的延迟主要来自两个方面：网络传输时延和浏览器渲染时延，网络传输时延主要决定于网络性能，
             而浏览器渲染时延则可以从CSS优化上下工夫。</p>
@@ -68,7 +68,7 @@
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;首先应该尽量避免使用通配符 * ；这会让浏览器渲染时遍历所有节点。然后避免后代选择器比如 div div p .look这样的。
             以这个选择器为例，浏览器会先找到拥有类look的元素，然后查询父级中是否有p，无则放弃样式，
-            有则继续查询父级直至完全符合才会采用样式，如果直接使用.look就可以直接确定想渲染的元素。所以, 请不要多次一句去写后代选择器。</p>
+            有则继续查询父级直至完全符合才会采用样式，如果直接使用.look就可以直接确定想渲染的元素。所以, 请不要多此一举去写后代选择器。</p>
 
 
     </section>
