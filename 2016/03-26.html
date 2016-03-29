@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM相关讲解及HTML语义化</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>DOM相关讲解及HTML语义化</h1>
+        <p>前端技术分享 03/26/2016 <br/>
+            by momoki</p>
+
+        <p class="view"><a href="https://github.com/ShonLin/WeeklyDiscussionsRecord/blob/gh-pages/2016/03-26.html">在GitHub上查看本页
+            <small>ShonLin/WeeklyDiscussionsRecord/2016/03-26</small>
+        </a></p>
+
+        <p class="view"><a href="../index.html">返回主页
+        </a></p>
+    </header>
+    <section>
+        <h3>
+            <a class="anchor" aria-hidden="true"><span
+                    aria-hidden="true" class="octicon octicon-link"></span></a>JavaScript的DOM</h3>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; DOM(Document Object Model, 文档对象模型)是一种用于HTML和XML的文档编程接口,
+            DOM把整个HTML文档表示为一棵节点树, 节点分为元素节点,文本节点和属性节点, 其中元素节点是DOM的原子,
+            所谓元素也就是HTML文档中的标签元素,元素在文档中的布局形成了文档的结构,其中<code>&lt;html&gt;</code>是节点树的根元素,
+            类似于<code>&lt;body&gt;,&lt;head&gt;</code>这样微雨同一层次且互不包含的,属于兄弟关系;
+            元素标签里面的属性就是属性节点,文本节点就是一段文本.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; 那么如何获取元素呢,最基本的方法就是通过id, 标签名和类名来获取, childNodes属性还可以获取.
+            除了getElementByID外其它方法获取的是一组dom元素,通过这些方法获取的这一组dom元素,不是数组,是NodeList,
+            虽然会有一些数组的属性比如长度,下标, 但是也有其自己的特点,最大的特点就是时效性,比如:</p>
+        <p><code>&lt;ul&gt; <br />
+            &lt;li&gt; &lt;/li&gt;<br />
+            &lt;li&gt; &lt;/li&gt;<br />
+            &lt;li&gt; &lt;/li&gt;<br />
+            &lt;li&gt; &lt;/li&gt;<br />
+            &lt;/ul&gt; <br /></code></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; 我们现在获取到了这四个li的nodelist,如果再更改这个li比如把第一个li插入ul的底部,那么这个list中
+            原来的第二个元素就变成了第一个元素。</p>
+        <p>获取元素节点的内容,使用innerHTML,获取对象起始位置到终止位置的全部内容</p>
+        <p>在innerHTML和innerText的选用上还有一些问题待讨论</p>
+
+        <h3>
+            <a id="android_development" class="anchor" href="#designer-templates" aria-hidden="true"><span
+                    aria-hidden="true" class="octicon octicon-link"></span></a>HTML的语义化</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;写js的时候要注意平稳退化和HTML语义化,还有分离JS/CSS/HTML,这样做的目的是方便爬虫和机器的解析.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;语义化首先要做的就是尽可能少的使用无语义的div标签, 在HTML5 中提供了许多新标签, 比如header,
+            nav, footer等, 要合理运用;还有标题标签,h1~h6, li, em 等; 这些是有利于seo(搜索引擎优化)的. 需要注意的是有语义的标签也
+            不应随意使用,如果只是需要一个容器,那么用div就行了,为了HTML语义化, 需要注意以下几点</p>
+        <p><strong>
+            1. 不要使用纯样式标签, 比如 b, font, u等,改用CSS设置. <br />
+            2. 在语义不明显时, 既可以使用div也可以使用p时, 尽量使用p; 因为p在默认情况下有上下间距, 对兼容特殊终端有利. <br />
+            3. 强调部分可以使用strong和em. <br />
+            4. 设计表格时, 标题,表头,主体,尾部等使用相应的标签包围. <br />
+            5. 表单使用fieldset标签包围, 并使用legend说明表单用途. <br />
+            6. 表单里, 每个input标签对应的说明文本都需要使用label标签,并且用input的id和label的for对应起来. <br />
+        </strong></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;HTML语义化会提高用户体验,有利于爬虫解析,方便其它设备阅读(比如盲人阅读器等), 便于团队开发维护</p>
+
+        <p>最后祝你, 身 体 健 康, 再见 : )</p>
+    </section>
+    <footer>
+        <p>This project is maintained by <a href="https://github.com/ShonLin">ShonLin</a></p>
+        <p>
+            <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
+            </small>
+        </p>
+    </footer>
+</div>
+<script src="javascripts/scale.fix.js"></script>
+</body>
+</html>
