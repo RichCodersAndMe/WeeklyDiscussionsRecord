@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+<title>小测试</title>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.knob.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/answer.css">
+</head>
+
+<body>
+	<div class="content">
+		<div class="list">
+			<ol>
+				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
+				<li class="active">经前思想不集中、工作效率低或易出错？</li>
+				<li>经前三四天关节或者肌肉出现疼痛感？</li>
+				<li>经期莫名烦躁，一点就着？</li>
+				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
+				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
+				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
+			</ol>
+		</div>
+		<div class="select">
+			<div class="select-content">
+				<div class="ball">					
+					<div class="ring">
+						<input style="display: none" class="knob" data-width="140"
+						   data-displayPrevious=true data-fgColor="#339cff" data-skin="tron"
+						   data-thickness=".1" value="15">
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+<script>
+	$(function() {
+		$(".knob").knob();
+	});
+</script>
+</html>
