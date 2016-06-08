@@ -27,6 +27,12 @@ $(function () {
         this.onCancel = function () {};
         this.onRelease = function () {};
 
+        var gradient=ctx.createLinearGradient(0,0,170,0);
+        gradient.addColorStop("0","#f697ff");
+        gradient.addColorStop("0.5","#b7a2ff");
+        gradient.addColorStop("1","#7aadfe");
+        opt.fgColor=gradient;
+
         this.val = function (nv) {
             if (null != nv) {
                 opt.stopper && (nv = Math.max(Math.min(nv, opt.max), opt.min));
@@ -230,7 +236,7 @@ $(function () {
                         // UI
                         ,'cursor' : $this.data('cursor')
                         ,'thickness' : $this.data('thickness') || 0.35
-                        ,'width' : $this.data('width') || 200
+                        ,'width' : $this.data('width') || $("#select-content").width()*0.55
                         ,'displayInput' : $this.data('displayinput') == null || $this.data('displayinput')
                         ,'displayPrevious' : $this.data('displayprevious')
                         ,'fgColor' : $this.data('fgcolor') || '#87CEEB'
@@ -269,7 +275,7 @@ $(function () {
                     ,gopt
                 );
 
-                var c = $('<canvas width="' + opt.width + '" height="' + opt.width + '"></canvas>')
+                var c = $('<canvas id="canvas" width="' + opt.width + '" height="' + opt.width + '"></canvas>')
                     ,wd = $('<div style=width:' + opt.width + 'px;display:inline;"></div>')
                     ,k
                     ,vl = $this.val()

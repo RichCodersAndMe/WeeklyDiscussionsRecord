@@ -1,46 +1,60 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
-<title>小测试</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>测测你的少女值</title>
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/jquery.knob.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-<link rel="stylesheet" type="text/css" href="css/answer.css">
+	<link rel="stylesheet" type="text/css" href="css/answer.css">
 </head>
 
 <body>
+    <div class="share">
+        <img src="image/share.png" />
+    </div>
+	<div class="lock_wrp" id="lock">
+		<div class="lock">
+			<i></i><br />
+			为了更好的体验,请使用竖屏浏览
+		</div>
+	</div>
+    <div class="sug"><img src="image/skip.jpg" /></div>
 	<div class="content">
-		<div class="list">
+		<div class="banner"> <img src="image/icon.png" /> </div>
+        <div class="list">
 			<ol>
-				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
-				<li class="active">经前思想不集中、工作效率低或易出错？</li>
-				<li>经前三四天关节或者肌肉出现疼痛感？</li>
-				<li>经期莫名烦躁，一点就着？</li>
-				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
-				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
-				<li>有在日常饮食中食用蔬菜、豆类、全麦等纤维质比较多的食物吗？</li>
 			</ol>
 		</div>
 		<div class="select">
-			<div class="select-content">
-				<div class="ball">					
+			<div id="select-content">
+				<div class="ball">
 					<div class="ring">
-						<input style="display: none" class="knob" data-width="140"
-						   data-displayPrevious=true data-fgColor="#339cff" data-skin="tron"
-						   data-thickness=".1" value="15">
-					</div>					
+						<input style="display: none" class="knob"
+						   data-displayPrevious=true data-skin="tron"
+						   data-thickness=".2" value="1">
+					</div>
+                    <button>确定</button>
 				</div>
 			</div>
 		</div>
-		
 	</div>
-	
+    <div class="res-content">
+        <div class="banner"> <img src="image/icon.png" /> </div>
+        <div class="res">
+            <div class="score-content">
+                <img src="image/logo.png" />
+                <div id="score">100</div>
+                <button class="share-b">分享</button>
+            </div>
+            <div class="detail">
+                <h1>恭喜你，属于全球20%的少女之一！</h1>
+                <p>萌萌哒~ </p>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/test.js"></script>
 </body>
-<script>
-	$(function() {
-		$(".knob").knob();
-	});
-</script>
 </html>
