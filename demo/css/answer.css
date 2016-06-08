@@ -81,6 +81,7 @@ li.active{
 }
 .res-content{
 	display: none;
+position:absolute;
 	left: 0;
 	z-index: 9999;
 	height: 100%;
@@ -114,7 +115,7 @@ li.active{
 }
 .score-content img{
 	margin-top: 5%;
-	width: 50%;
+	height: 25%;
 }
 .score-content button{
 	position: absolute;
@@ -129,7 +130,7 @@ li.active{
 	border-radius: 20px;
 }
 .detail{
-	padding: 2%;
+	padding:0 2%;
 }
 .detail h1{
 	color: #339cff;
@@ -137,7 +138,8 @@ li.active{
 }
 .share img{width: 80%}
 .share{
-	background: rgba(0,0,0,0.5);
+position:absolute;
+	background: rgba(0,0,0,0.7);
 	text-align: right;
 	display: none;
 	z-index: 99999;
