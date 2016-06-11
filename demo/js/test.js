@@ -42,6 +42,10 @@ $(function() {
         $('.knob').val(1).trigger('change');
     }
     $(".ball button").click(function(){
+        $(".ball").css({
+            "background": "url(image/button2.png) no-repeat 50%  50%",
+            "background-size": "74%"
+        });
         currentQuestionId=$(".active").attr("id");
         currentQuestionFlag=currentQuestionId.replace("q","");
         score=$('input.knob').val();
@@ -57,6 +61,7 @@ $(function() {
             question[currentQuestionFlag][6]=question[currentQuestionFlag][5];
         }
         if(currentQuestionFlag>=17) {
+            var flag=1;
             for (i = 0; i < 18; i++)
                 if (question[i][6] == -1){
                     currentQuestionId="q"+i;
@@ -64,17 +69,23 @@ $(function() {
                     turnTo();
                     $(".active").removeClass("active");
                     $("#"+currentQuestionId).addClass("active");
-                    break;
+                    flag=0;break;
                 }
-                else{
+            if(flag==1){
                 //    结束答题,出结果
-                    $(".content").fadeOut();
-                    $(".res-content").fadeIn();
-                    result();
-                }
+                $(".content").fadeOut();
+                $(".res-content").fadeIn();
+                result();
+            }
         }
         else{
             turnTo();
+            setTimeout(function(){
+                $(".ball").css({
+                    "background": "url(image/button.png) no-repeat 50%  50%",
+                    "background-size": "74%"
+                });
+            },200);
             $(".active").removeClass("active").next().addClass("active");
         }
     });
