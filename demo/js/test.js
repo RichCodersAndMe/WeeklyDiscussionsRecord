@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
     //初始化题目
     var question=[["经前一周出现乳房胀痛的情况？",8,7,6,5,4,-1],
         ["经前思想不集中、工作效率低或易出错？",6,5,4,3,2,-1],
@@ -33,6 +33,7 @@ $(function() {
     $(".sug").click(function () {
         $(".sug").fadeOut()
     });
+    图像接口
     var currentQuestionFlag=0;
     var currentQuestionId="q0";
     var score=1;
