@@ -6,7 +6,9 @@ html,body,.content{height:100%;}
 .lock i{position:relative; display:block;width:74px; height:110px; background:url(../image/iphone.png) 0 0 no-repeat; background-size:100%; margin:0 auto;
     animation:myfirst 2s infinite;
 }
-
+button{appearance:normal;
+    -moz-appearance:normal; /* Firefox */
+    -webkit-appearance:normal; /* Safari and Chrome */}
 @keyframes myfirst
 {
     0%   {transform: rotate(-90deg);}
