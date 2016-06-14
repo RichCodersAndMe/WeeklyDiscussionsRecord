@@ -80,6 +80,7 @@ li.active{
 	height: 50%;
 	top:25%;
 	left: 25%;
+	webkit-tap-highlight-color:rgba(0,0,0,0);
 	border: 0;
 	text-indent: -9999px;
 }
