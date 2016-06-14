@@ -6,15 +6,6 @@ html,body,.content{height:100%;}
 .lock i{position:relative; display:block;width:74px; height:110px; background:url(../image/iphone.png) 0 0 no-repeat; background-size:100%; margin:0 auto;
     animation:myfirst 2s infinite;
 }
-button{appearance:none;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-}
-
-button:hover {border: none;outline:none}	/* 鼠标移动到链接上 */
-button:active{border: none;outline:none}
-button:focus{border: none;outline:none}
-
 @keyframes myfirst
 {
     0%   {transform: rotate(-90deg);}

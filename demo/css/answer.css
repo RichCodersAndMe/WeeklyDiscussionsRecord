@@ -74,13 +74,12 @@ li.active{
 	background:url(../image/button.png) no-repeat 50%  50%;
 	background-size:74%;
 }
-.ball button{
+.ball .button{
 	position: absolute;
 	width: 50%;
 	height: 50%;
 	top:25%;
 	left: 25%;
-	background: transparent;
 	border: 0;
 	text-indent: -9999px;
 }

@@ -41,7 +41,7 @@
             window.location.href="#"+currentQuestionId;
             $('.knob').val(1).trigger('change');
         }
-        $(".ball button").click(function(){
+        $(".button").click(function(){
             $(".ball").css({
                 "background": "url(image/button2.png) no-repeat 50%  50%",
                 "background-size": "74%"
