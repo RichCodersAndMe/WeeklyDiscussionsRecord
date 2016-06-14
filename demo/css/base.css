@@ -9,6 +9,10 @@ html,body,.content{height:100%;}
 button{appearance:normal;
     -moz-appearance:normal; /* Firefox */
     -webkit-appearance:normal; /* Safari and Chrome */}
+
+button:hover {border: none;outline:none}	/* 鼠标移动到链接上 */
+button:active{border: none;outline:none}
+button:focus{border: none;outline:none}
 @keyframes myfirst
 {
     0%   {transform: rotate(-90deg);}
@@ -20,8 +24,12 @@ button{appearance:normal;
     .lock_wrp{ display:inherit;}
     .content{display:none;}
 }
-.index{width: 100%;height: 100%}
-.index img{width: 100%;height: 99%}
-.but{position: absolute;bottom:15%;width: 50%;left: 25%}
+.index{width: 100%;
+    height: 100%;
+    background:url(../image/index-bg.jpg);
+    background-size:100%;
+}
+.index img{width: 100%;margin-top: 12%;}
+.but{position: absolute;bottom:14%;width: 50%;left: 25%}
 a{border: 0;background: transparent}
 .but img{width:100%;}
