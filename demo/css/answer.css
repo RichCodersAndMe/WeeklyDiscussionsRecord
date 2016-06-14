@@ -17,6 +17,8 @@ body{
 	height: 76%;margin-top: 15%;
 }
 
+.content{display: none}
+
 .banner{
 	height: 5%;
 	text-align: center;
